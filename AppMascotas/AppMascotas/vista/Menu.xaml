@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMascotas.View.Menu">
+ 
+        <StackLayout Margin="30" Spacing="10">
+        <Frame>
+            <Label Text="App Mascotas" TextColor="Black" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </Frame>
+       
+        <StackLayout >
+
+            <Button x:Name="botoncrear"  Text="Agregar Mascotas" Clicked="agregar" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+                       TextColor="White" BackgroundColor="#A7351C" />
+            <Button x:Name="botonlistar" Text="Listar Macotas" Clicked="listar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#00AE0C"/>
+        </StackLayout>
+
+
+      
+    </StackLayout>
+</ContentPage>

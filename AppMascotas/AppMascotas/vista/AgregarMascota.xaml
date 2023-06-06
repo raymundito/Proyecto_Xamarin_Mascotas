@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMascotas.vista.AgregarMascota">
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame>
+                <Label Text="Agregar Mascotas!" TextColor="Black" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+            </Frame>
+           
+            <StackLayout Margin="20">
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"  />
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="45"/>
+                        <ColumnDefinition  Width="50"/>
+                    </Grid.ColumnDefinitions>
+                </Grid>
+            </StackLayout>
+          
+            <StackLayout Spacing="15" Margin="30">
+             
+                <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"   Placeholder="Nombre:" Keyboard="Text" Text="perro" />
+                
+                <Entry x:Name="tamanio"  Grid.Row="1" Grid.Column="0"  Placeholder="Tamaño:" Keyboard="Text" Text="20"/>
+                <Entry x:Name="peso"  Grid.Row="1" Grid.Column="0"  Placeholder="Peso:" Keyboard="Text" Text="30" />
+                <Entry x:Name="habitat"  Grid.Row="1" Grid.Column="0"  Placeholder="Habitat:" Keyboard="Text" Text="selva" />
+                <Entry x:Name="precio"  Grid.Row="1" Grid.Column="0"  Placeholder="Precio:" Keyboard="Text" Text="205" />
+                <Entry x:Name="sexo"  Grid.Row="1" Grid.Column="0"  Placeholder="Sexo:" Keyboard="Text" Text="m" />
+                <Entry x:Name="edad"  Grid.Row="1" Grid.Column="0"  Placeholder="Edad:" Keyboard="Text" Text="14" />
+                <Entry x:Name="iva"  Grid.Row="1" Grid.Column="0"  Placeholder="IVA:" Keyboard="Text" Text="1614"/>
+            </StackLayout>
+            <StackLayout Spacing="20">
+
+                <Button x:Name="AgregarMguardar" Text="Guardar" Clicked="Guardar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#00AE0C"/>
+
+                <Button x:Name="AgregarMcancelar"  Text="Cancelar"  Clicked="Cancelar" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+                       TextColor="White" BackgroundColor="#A7351C" />
+
+
+          
+            </StackLayout>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

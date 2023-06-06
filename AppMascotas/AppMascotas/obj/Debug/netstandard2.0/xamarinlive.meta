@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<XamlProjectMeta xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <Files>
+    <XamlFileMeta>
+      <FilePath>C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\App.xaml</FilePath>
+      <Hash>44-37-06-A6-E4-1A-48-24-9B-C6-3D-0A-96-42-86-3C</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\MainPage.xaml</FilePath>
+      <Hash>B2-BA-E4-71-38-6B-52-5A-6B-03-38-8D-95-BD-F6-42</Hash>
+      <Properties />
+    </XamlFileMeta>
+    <XamlFileMeta>
+      <FilePath>C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\vista\ListarMascota.xaml</FilePath>
+      <Hash>C1-7F-9D-5B-25-51-C6-FA-0D-E0-60-68-E0-70-B1-23</Hash>
+      <Properties />
+    </XamlFileMeta>
+  </Files>
+</XamlProjectMeta>

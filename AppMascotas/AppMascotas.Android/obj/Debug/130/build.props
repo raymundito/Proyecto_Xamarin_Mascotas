@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638206137392177291
+_nugetassetstimestamp=638212260769147433
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\so17\source\repos\appmascotas\appmascotas\appmascotas.android\appmascotas.android.csproj
+projectfullpath=c:\users\so17\source\repos\appmascotas\proyecto_xamarin_mascotas\appmascotas\appmascotas.android\appmascotas.android.csproj

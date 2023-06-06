@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj": {}
+    "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj": {}
   },
   "projects": {
-    "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj": {
+    "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj",
+        "projectUniqueName": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj",
         "projectName": "AppMascotas.Android",
-        "projectPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj",
+        "projectPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas.Android\\AppMascotas.Android.csproj",
         "packagesPath": "C:\\Users\\so17\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas.Android\\obj\\",
+        "outputPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas.Android\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "monoandroid13.0": {
             "projectReferences": {
-              "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj": {
-                "projectPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj"
+              "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj": {
+                "projectPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj"
               }
             }
           }
@@ -49,19 +49,23 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           }
         }
       }
     },
-    "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj": {
+    "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj",
+        "projectUniqueName": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj",
         "projectName": "AppMascotas",
-        "projectPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj",
+        "projectPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas\\AppMascotas.csproj",
         "packagesPath": "C:\\Users\\so17\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\AppMascotas\\AppMascotas\\obj\\",
+        "outputPath": "C:\\Users\\so17\\source\\repos\\AppMascotas\\Proyecto_Xamarin_Mascotas\\AppMascotas\\AppMascotas\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -108,6 +112,10 @@
             "Xamarin.Forms": {
               "target": "Package",
               "version": "[5.0.0.2196, )"
+            },
+            "sqlite-net-pcl": {
+              "target": "Package",
+              "version": "[1.8.116, )"
             }
           },
           "imports": [

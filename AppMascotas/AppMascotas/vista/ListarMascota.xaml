@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMascotas.vista.ListarMascota">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="Welcome a listar Mascotas NUEVO!"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" />
+            <CollectionView x:Name="collectionView" SelectionMode="Single">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <StackLayout>
+                            <Label Text="{Binding nombre}" FontSize="Medium" />
+                            <Label Text="{Binding tamanio}" TextColor="Silver"  FontSize="Small" />
+                            <Label Text="{Binding peso}" TextColor="Silver"  FontSize="Small" />
+                            <Label Text="{Binding habitat}" TextColor="Silver"  FontSize="Small" />
+                            <Label Text="{Binding precio}" TextColor="Silver"  FontSize="Small" />
+                            <Label Text="{Binding sexo}" TextColor="Silver"  FontSize="Small" />
+                            <Label Text="{Binding edad}" TextColor="Silver"  FontSize="Small" />
+                            <Label Text="{Binding iva}" TextColor="Silver"  FontSize="Small" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+
+
+            <Button x:Name="botonregresar" Text="Regresar" Clicked="regresar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#00AE0C"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
