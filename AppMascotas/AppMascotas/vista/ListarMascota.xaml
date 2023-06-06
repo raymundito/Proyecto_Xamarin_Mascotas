@@ -1,24 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMascotas.vista.ListarMascota">
+             x:Class="AppMascotas.vista.ListarMascota"
+             Title="Mascotas Registradas">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource" >                    
+                    <On Platform="Android" Value="dogs" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome a listar Mascotas NUEVO!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Spacing="10" Margin="30">
+            
+            
             <CollectionView x:Name="collectionView" SelectionMode="Single">
                 <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <StackLayout>
-                            <Label Text="{Binding nombre}" FontSize="Medium" />
-                            <Label Text="{Binding tamanio}" TextColor="Silver"  FontSize="Small" />
-                            <Label Text="{Binding peso}" TextColor="Silver"  FontSize="Small" />
-                            <Label Text="{Binding habitat}" TextColor="Silver"  FontSize="Small" />
-                            <Label Text="{Binding precio}" TextColor="Silver"  FontSize="Small" />
-                            <Label Text="{Binding sexo}" TextColor="Silver"  FontSize="Small" />
-                            <Label Text="{Binding edad}" TextColor="Silver"  FontSize="Small" />
-                            <Label Text="{Binding iva}" TextColor="Silver"  FontSize="Small" />
+                    <DataTemplate >
+                        <StackLayout BackgroundColor="#CBEBE6" Spacing="10"  >
+                            <Label Text="{Binding nombre}" TextColor="Black"   FontSize="Medium" />
+                            <Label Text="{Binding peso}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding habitat}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding precio}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding sexo}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding edad}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding iva}" TextColor="Black"  FontSize="Medium" />
                         </StackLayout>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
@@ -27,6 +35,10 @@
 
             <Button x:Name="botonregresar" Text="Regresar" Clicked="regresar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
                 TextColor="White" BackgroundColor="#00AE0C"/>
+            <Button x:Name="Eliminar" Text="Regresar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#E0CBEB"/>
+            <Button x:Name="Actualizar" Text="Regresar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#CDCBEB"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

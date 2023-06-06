@@ -18,14 +18,14 @@ namespace AppMascotas.vista
         public AgregarMascota ()
 		{
 			InitializeComponent ();
-            this.AgregarMcancelar.Clicked += Cancelar;
+            this.listarMascota.Clicked += ListarMascota;
             this.AgregarMguardar.Clicked += Guardar;
 
         }
-        public async void Cancelar(object sender, EventArgs e)
+        public async void ListarMascota(object sender, EventArgs e)
         {
 
-            await Navigation.PopAsync();
+            await Navigation.PushAsync( new ListarMascota());
 
         }
         public async void Guardar(object sender, EventArgs e)
@@ -48,7 +48,7 @@ namespace AppMascotas.vista
             // subscribed.IsChecked = false;
              ListarMascota lista = new ListarMascota();
             
-            lista.collectionView.ItemsSource = await App.Database.GetMascotaAsync();
+          //  lista.collectionView.ItemsSource = await App.Database.GetMascotaAsync();
 
             // await Navigation.PushAsync(new View.Menu());
 

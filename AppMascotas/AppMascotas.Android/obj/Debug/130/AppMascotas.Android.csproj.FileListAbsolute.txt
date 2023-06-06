@@ -1284,3 +1284,4 @@ C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\App
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas.Android\obj\Debug\130\res\drawable\login.png
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas.Android\obj\Debug\130\res\drawable\dog.jpg
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas.Android\obj\Debug\130\res\drawable\dogs.png

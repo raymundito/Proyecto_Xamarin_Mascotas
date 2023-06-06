@@ -19,6 +19,10 @@ namespace AppMascotas.Data
             _database.CreateTableAsync<Mascota>();
         }
 
+        public Database()
+        {
+        }
+
         public Task<List<Mascota>> GetMascotaAsync()
         {
             return _database.Table<Mascota>().ToListAsync();

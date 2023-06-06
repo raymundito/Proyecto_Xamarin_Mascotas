@@ -44,7 +44,7 @@ namespace AppMascotas.vista {
         private global::Xamarin.Forms.Button AgregarMguardar;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
-        private global::Xamarin.Forms.Button AgregarMcancelar;
+        private global::Xamarin.Forms.Button listarMascota;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
@@ -58,7 +58,7 @@ namespace AppMascotas.vista {
             edad = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "edad");
             iva = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Entry>(this, "iva");
             AgregarMguardar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AgregarMguardar");
-            AgregarMcancelar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "AgregarMcancelar");
+            listarMascota = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Button>(this, "listarMascota");
         }
     }
 }
