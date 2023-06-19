@@ -1,17 +1,22 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMascotas.MainPage">
-    
+             xmlns:local="clr-namespace:XamarinEntry"    
+             xmlns:controls="clr-namespace:XamarinEntry"
+             x:Class="AppMascotas.MainPage"
+             BackgroundColor="#273C56">
+   <!--creacion de login-->
 
     <StackLayout Margin="30" Spacing="30">
-        <Frame BackgroundColor="#27B2B0" Padding="24"  CornerRadius="1">
+        <Frame BackgroundColor="#3B3B3B" Padding="24"  CornerRadius="1">
 
-            <Label Text="Login" FontAttributes="Bold" FontFamily="Lobster" HorizontalTextAlignment="Center" TextColor="White" FontSize="46"/>
+            <Label Text="Bienvenid@s" FontAttributes="Bold" FontFamily="Lobster" HorizontalTextAlignment="Center" TextColor="White" FontSize="46"/>
         </Frame>
         <Image  HeightRequest="100" Source="/drawable/login.png" />
-        <StackLayout>
-        <Grid>
+        <StackLayout Spacing="20">
+            
+             <!--definición de grid-->
+        <Grid> 
             <Grid.RowDefinitions>
                     <RowDefinition Height="Auto"  />
                 </Grid.RowDefinitions>
@@ -21,13 +26,17 @@
             </Grid.ColumnDefinitions>            
            
         </Grid>
-        </StackLayout>
-    
-        <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"   Placeholder="Usuario" Keyboard="Text" />
+            
+            <!--definicion de entrys and grid-->
+            
+            <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"  Background="white" Placeholder="Usuario" PlaceholderColor="Black" TextColor="Black" Keyboard="Text" />
+            <Entry x:Name="contrasenia"  Grid.Row="1" Grid.Column="0"  Background="white" Placeholder="Contraseña" Keyboard="Text" PlaceholderColor="Black" TextColor="Black" IsPassword="True" />
+            <Button x:Name="irprincipal" Text="Siguiente" Clicked="siguiente" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#049D37"/>
 
-        <Entry x:Name="contrasenia"  Grid.Row="1" Grid.Column="0"  Placeholder="Contraseña" Keyboard="Text" />
-        <Button x:Name="irprincipal" Text="Siguiente" Clicked="siguiente" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#00AE0C"/>
+        </StackLayout>
+
+       
     </StackLayout>
 
 </ContentPage>

@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMascotas.vista.ListarUsuario">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource" >
+                    <On Platform="Android" Value="listar" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <!--listar usuarios-->
+        <StackLayout Spacing="10" Margin="30">
+            <Entry x:Name="nombre" Placeholder="Nombre" />
+            <Entry x:Name="contrasenia" Placeholder="Contrasenia" />
+            <Entry x:Name="correo" Placeholder="Correo" />
+            <Entry x:Name="ine" Placeholder="Ine" />
+            <Entry x:Name="numcuenta" Placeholder="numcuenta" />
+            <Entry x:Name="telefono" Placeholder="Telefono" />
+            <Entry x:Name="direccion" Placeholder="Direccion" />
+            <!--mostrar usuarios-->
+            <CollectionView x:Name="collectionView" SelectionMode="Single"  SelectionChanged="collectionView_SelectionChanged"  >
+                <CollectionView.ItemTemplate >
+                    <DataTemplate  >
+                        <StackLayout  BackgroundColor="#5BBBD9" Spacing="10"   >
+
+                            <Label Text="{Binding nombre}" TextColor="Black"   FontSize="Medium" />
+                            <Label Text="{Binding contrasenia}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding correo}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding ine}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding numcuenta}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding telefono}" TextColor="Black"  FontSize="Medium" />
+                            <Label Text="{Binding direccion}" TextColor="Black"  FontSize="Medium" />
+                        </StackLayout>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+            
+            <!--Declaración de botones-->
+            <Button x:Name="botonregresar" Text="Regresar" Clicked="regresar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#00AE0C"/>
+            <Button x:Name="Eliminar" Text="Eliminar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#DE5C20"/>
+            <Button x:Name="Actualizar" Text="Actualizar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#5BBBD9"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

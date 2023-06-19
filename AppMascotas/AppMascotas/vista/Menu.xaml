@@ -2,22 +2,39 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMascotas.View.Menu"
-             Title="Menú">
- 
-        <StackLayout Margin="30" Spacing="10">
-        <Frame>
-            <Label Text="App Mascotas" TextColor="Black" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-        </Frame>
-       
-        <StackLayout >
+             Title="Menú"
+              BackgroundColor="#BFC9CA">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource" >
+                    <On Platform="Android" Value="Menu" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+  
 
-            <Button x:Name="botoncrear"  Text="Agregar Mascotas" Clicked="agregar" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+        <StackLayout Margin="30" Spacing="70">
+        <Frame BackgroundColor="#3B3B3">
+            <Label Text="App Mascotas" TextColor="White" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+        </Frame>
+        <Image  HeightRequest="100" Source="/drawable/dogs.png" />
+
+        <StackLayout  Spacing="20">
+            <Button x:Name="botoncrear"  Text="Agregar Mascotas" Clicked="agregar" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"  ImageSource="agregarmas.png"
                        TextColor="White" BackgroundColor="#A7351C" />
-            <Button x:Name="botonlistar" Text="Listar Macotas" Clicked="listar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#00AE0C"/>
+            <Button x:Name="botonlistar" Text="Listar Macotas" Clicked="listar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="listarmas.png"
+                TextColor="White" BackgroundColor="#00AE0C" />
+            <Button x:Name="botoncrearusuario"  Text="Agregar Usuario" Clicked="agregarUsuario" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2" ImageSource="agregarusr.png"
+                       TextColor="White" BackgroundColor="#DD31DA" />
+            <Button x:Name="botonusuario" Text="Listar Usuario" Clicked="listarUsuario" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="lista.png"
+                TextColor="White" BackgroundColor="#D35400"/>          
         </StackLayout>
 
 
       
     </StackLayout>
 </ContentPage>
+
+

@@ -16,7 +16,13 @@ C:\Users\so17\source\repos\AppMascotas\AppMascotas\AppMascotas\bin\Debug\netstan
 C:\Users\so17\source\repos\AppMascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\XamlC.stamp
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.csproj.AssemblyReference.cache
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\AgregarMascota.xaml.g.cs
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\AgregarUsuario.xaml.g.cs
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\ListarMascota.xaml.g.cs
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\ListarUsuario.xaml.g.cs
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\Menu.xaml.g.cs
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.AssemblyInfoInputs.cache
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.AssemblyInfo.cs
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.csproj.CoreCompileInputs.cache
@@ -28,7 +34,3 @@ C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\App
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.dll
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\refint\AppMascotas.dll
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.pdb
-C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\App.xaml.g.cs
-C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\AgregarMascota.xaml.g.cs
-C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\Menu.xaml.g.cs
-C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\ListarMascota.xaml.g.cs

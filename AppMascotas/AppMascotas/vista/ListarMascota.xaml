@@ -1,44 +1,85 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMascotas.vista.ListarMascota"
-             Title="Mascotas Registradas">
-    <ContentPage.ToolbarItems>
+             x:Class="AppMascotas.vista.ListarMascota"        
+             xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
+             Title="Mascotas Registradas"
+              BackgroundColor="#2980B9">
+        <!--Uso de contentpage-->
+        <ContentPage.ToolbarItems>   
         <ToolbarItem >
             <ToolbarItem.IconImageSource>
-                <OnPlatform x:TypeArguments="ImageSource" >                    
-                    <On Platform="Android" Value="dogs" />
+                <OnPlatform x:TypeArguments="ImageSource" >
+                    <On Platform="Android" Value="listar" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-    <ContentPage.Content>
-        <StackLayout Spacing="10" Margin="30">
-            
-            
-            <CollectionView x:Name="collectionView" SelectionMode="Single">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate >
-                        <StackLayout BackgroundColor="#CBEBE6" Spacing="10"  >
-                            <Label Text="{Binding nombre}" TextColor="Black"   FontSize="Medium" />
-                            <Label Text="{Binding peso}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding habitat}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding precio}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding sexo}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding edad}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding iva}" TextColor="Black"  FontSize="Medium" />
-                        </StackLayout>
+
+    <ContentPage.Content   Title="Mascotas Registradas">
+
+        <StackLayout   Padding="15">
+            <CollectionView x:Name="collectionView" SelectionMode="Single"  SelectionChanged="collectionView_SelectionChanged" ItemsLayout="VerticalGrid,2" BackgroundColor="#E8F8F5"  >
+                <CollectionView.ItemTemplate  >
+                    <DataTemplate  >
+                        <Frame
+                        Padding="15"
+                        CornerRadius="5"
+                        IsClippedToBounds="False">
+                        <Grid RowSpacing="20" >  <!--Definición de grid-->
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="35"  />
+                                <RowDefinition Height="35" />
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="70" />
+                                <ColumnDefinition Width="140" />
+                            </Grid.ColumnDefinitions>
+                            <Image Grid.RowSpan="2"
+                                   Source="{Binding ruta}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60"/>
+                            <Label Grid.Column="1" 
+                                   Text="{Binding nombre}"
+                                   FontAttributes="Bold"
+                                   LineBreakMode="TailTruncation" TextColor="Black"   FontSize="Medium" />
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding precio}"
+                                   LineBreakMode="TailTruncation"
+                                   FontAttributes="Italic"
+                                   VerticalOptions="End"  TextColor="Black"   FontSize="Medium" />
+                        </Grid>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
+            </CollectionView >
+            <!--Agregando Entry para poder actualizar elementos--> 
+            <StackLayout x:Name ="mystack" IsVisible="false" >
+                <Entry x:Name="nombre" Placeholder="Nombre" PlaceholderColor="Black" TextColor="Black" Background="#D6DBDF" FontAttributes="Bold"  />
+                <Entry x:Name="peso" Placeholder="Peso"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
+                <Entry x:Name="habitat" Placeholder="Habitat "  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black" />
+                <Entry x:Name="precio" Placeholder="Precio"  FontAttributes="Bold " TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black" />
+                <Entry x:Name="sexo" Placeholder="Sexo"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black" />
 
+                <Entry x:Name="edad" Placeholder="Edad"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
+                <Entry x:Name="iva" Placeholder="Iva"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
+                <Entry x:Name="ruta" Placeholder="ruta"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
+                
+            </StackLayout>
+           <!--declaración de botones-->
+            <Button x:Name="Eliminar" Text="Eliminar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"   ImageSource="eliminar.png"
+                        TextColor="White" BackgroundColor="#EA3838"/>
+            <Button x:Name="Actualizar" Text="Actualizar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="actualizar.png"
+                        TextColor="White" BackgroundColor="#389FEA"  />
+            <Button x:Name="botonregresar"  Clicked="regresar" FontSize="Medium" TextColor="White" BorderColor="Black"   ImageSource="regresar.png" CornerRadius="50" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"   />
 
-            <Button x:Name="botonregresar" Text="Regresar" Clicked="regresar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#00AE0C"/>
-            <Button x:Name="Eliminar" Text="Regresar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#E0CBEB"/>
-            <Button x:Name="Actualizar" Text="Regresar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#CDCBEB"/>
+            
+
         </StackLayout>
+       
+
     </ContentPage.Content>
+   
 </ContentPage>

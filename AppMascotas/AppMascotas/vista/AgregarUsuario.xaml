@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMascotas.vista.AgregarUsuario">
+    
+    <!--vista para agregar usuario-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource" >
+                    <On Platform="Android" Value="agregar" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ContentPage.Content>
+        <ScrollView VerticalOptions="Center">
+
+            <StackLayout>
+
+                <StackLayout Margin="20">
+                    <Grid> <!--definicion de grid-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"  />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45"/>
+                            <ColumnDefinition  Width="50"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </StackLayout>
+                    <!--formulario-->
+                   <StackLayout Spacing="10" Margin="30">
+                    <Entry x:Name="nombre" Grid.Row="0" Grid.Column="0"   Placeholder="Nombre:" Keyboard="Text" />
+                    <Entry x:Name="contrasenia"  Grid.Row="1" Grid.Column="0"  Placeholder="Contrasenia:" Keyboard="Text"/>
+                    <Entry x:Name="correo"  Grid.Row="1" Grid.Column="0"  Placeholder="Correo:" Keyboard="Text"  />
+                    <Entry x:Name="ine"  Grid.Row="1" Grid.Column="0"  Placeholder="Ine:" Keyboard="Text" />
+                    <Entry x:Name="numcuenta"  Grid.Row="1" Grid.Column="0"  Placeholder="Numcuenta:" Keyboard="Text" />
+                    <Entry x:Name="telefono"  Grid.Row="1" Grid.Column="0"  Placeholder="Telefono:" Keyboard="Text"  />
+                    <Entry x:Name="direccion"  Grid.Row="1" Grid.Column="0"  Placeholder="Direccion:" Keyboard="Text"  />
+                    
+                </StackLayout>
+                <StackLayout Spacing="10" Margin="30" >
+                    <!--botones-->
+                    <Button x:Name="AgregarMguardar" Text="Guardar" Clicked="GuardarUsuario" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                TextColor="White" BackgroundColor="#00AE0C"/>
+                    <Button x:Name="listarUsuario"  Text="Listar"  Clicked="ListarUsuario" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+                       TextColor="White" BackgroundColor="#A7351C" />
+                    <Button x:Name="regresarmenu"  Text="Regresar"  Clicked="Regresarmenu" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+                       TextColor="White" BackgroundColor="#5BBBD9" />
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

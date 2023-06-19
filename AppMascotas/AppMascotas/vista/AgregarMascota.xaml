@@ -2,49 +2,78 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMascotas.vista.AgregarMascota"
-             Title="Agregar Mascotas">
+             xmlns:local="clr-namespace:AppMascotas.Validations"
+
+             Title="Agregar Mascotas"
+              BackgroundColor="#273C56">
+    
+    <!--vista para agreagar mascotas-->
+    <ContentPage.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource" >
+                    <On Platform="Android" Value="agregar" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
     <ContentPage.Content>
-        <StackLayout>
-            <Frame>
-                <Label Text="Agregar Mascotas!" TextColor="Black" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
-            </Frame>
-           
-            <StackLayout Margin="20">
-                <Grid>
-                    <Grid.RowDefinitions>
-                        <RowDefinition Height="Auto"  />
-                    </Grid.RowDefinitions>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="45"/>
-                        <ColumnDefinition  Width="50"/>
-                    </Grid.ColumnDefinitions>
-                </Grid>
-            </StackLayout>
-          
-            <StackLayout Spacing="15" Margin="30">
-             
-                <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"   Placeholder="Nombre:" Keyboard="Text" Text="perro" />
-                
-                <Entry x:Name="tamanio"  Grid.Row="1" Grid.Column="0"  Placeholder="Tamaño:" Keyboard="Text" Text="20"/>
-                <Entry x:Name="peso"  Grid.Row="1" Grid.Column="0"  Placeholder="Peso:" Keyboard="Text" Text="30" />
-                <Entry x:Name="habitat"  Grid.Row="1" Grid.Column="0"  Placeholder="Habitat:" Keyboard="Text" Text="selva" />
-                <Entry x:Name="precio"  Grid.Row="1" Grid.Column="0"  Placeholder="Precio:" Keyboard="Text" Text="205" />
-                <Entry x:Name="sexo"  Grid.Row="1" Grid.Column="0"  Placeholder="Sexo:" Keyboard="Text" Text="m" />
-                <Entry x:Name="edad"  Grid.Row="1" Grid.Column="0"  Placeholder="Edad:" Keyboard="Text" Text="14" />
-                <Entry x:Name="iva"  Grid.Row="1" Grid.Column="0"  Placeholder="IVA:" Keyboard="Text" Text="1614"/>
-            </StackLayout>
-            <StackLayout Spacing="20">
+        <ScrollView VerticalOptions="Center">
+            <StackLayout>
 
-                <Button x:Name="AgregarMguardar" Text="Guardar" Clicked="Guardar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+                <StackLayout Margin="20">
+                    <Grid> <!--definción de grid-->
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"  />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="45"/>
+                            <ColumnDefinition  Width="50"/>
+                        </Grid.ColumnDefinitions>
+                    </Grid>
+                </StackLayout>
+                <StackLayout Spacing="10" Margin="30">
+                    <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"   Text="Gato" Placeholder="Nombre:" Keyboard="Text" />
+                    <Entry x:Name="tamanio"  Grid.Row="1" Grid.Column="0"  Text="23" Placeholder="Tamaño:" Keyboard="Text" >
+                        <Entry.Behaviors> <!--validacion de campo tamanio-->
+                            <local:MaxLengthValidatorBehavior  MaxLength="10"/>
+                            <local:NumeroValidatorBehaviors/>
+                        </Entry.Behaviors>
+
+                    </Entry>
+                    <Entry x:Name="peso"  Grid.Row="1" Grid.Column="0"  Text="23" Placeholder="Peso:" Keyboard="Text"  />
+                    <Entry x:Name="habitat"  Grid.Row="1" Grid.Column="0" Text="selva"  Placeholder="Habitat:" Keyboard="Text" />
+                    <Entry x:Name="precio"  Grid.Row="1" Grid.Column="0"  Text="5" Placeholder="Precio:" Keyboard="Text" />
+                   <!-- <Entry x:Name="sexo"  Grid.Row="1" Grid.Column="0"  Text="m" Placeholder="Sexo:" Keyboard="Text"  /> -->
+                    <!--Declaracion de picker-->
+                    <Picker x:Name="picker"
+                            Title="Selecciona el sexo"
+                            TitleColor="White">
+                        <Picker.ItemsSource>
+                            <x:Array Type="{x:Type x:String}">
+                                <x:String>Macho</x:String>
+                                <x:String>hembra</x:String>
+                               
+                            </x:Array>
+                        </Picker.ItemsSource>
+                    </Picker>
+                    <Label x:Name="sexo" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" IsVisible="false"/>
+
+                    <Entry x:Name="edad"  Grid.Row="1" Grid.Column="0"  Text="2" Placeholder="Edad:" Keyboard="Text"  />
+                    <Entry x:Name="iva"  Grid.Row="1" Grid.Column="0"  Text="16" Placeholder="IVA:" Keyboard="Text" />
+                    <Entry x:Name="ruta"  Grid.Row="1" Grid.Column="0"  Text="Resources/drawable/gato.png" Keyboard="Text" />
+                </StackLayout>
+                <StackLayout Spacing="10" Margin="30" >
+                    <!--declaración de botones-->
+                    <Button x:Name="AgregarMguardar" Text="Guardar" Clicked="Guardar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
                 TextColor="White" BackgroundColor="#00AE0C"/>
-
-                <Button x:Name="listarMascota"  Text="Listar"  Clicked="ListarMascota" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+                    <Button x:Name="listarMascota"  Text="Listar"  Clicked="ListarMascota" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
                        TextColor="White" BackgroundColor="#A7351C" />
+                    <Button x:Name="regresarmenu"  Text="Regresar"  Clicked="Regresarmenu" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
+                       TextColor="White" BackgroundColor="#5BBBD9" />
+                </StackLayout>
 
-
-          
             </StackLayout>
-            
-        </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
