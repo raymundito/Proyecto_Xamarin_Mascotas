@@ -4,7 +4,7 @@
              x:Class="AppMascotas.vista.ListarMascota"        
              xmlns:ListCollection="clr-namespace:System.Collections.Generic;assembly=netstandard"
              Title="Mascotas Registradas"
-              BackgroundColor="#2980B9">
+              BackgroundImageSource="/drawable/fondo3">
         <!--Uso de contentpage-->
         <ContentPage.ToolbarItems>   
         <ToolbarItem >
@@ -18,13 +18,17 @@
 
     <ContentPage.Content   Title="Mascotas Registradas">
 
-        <StackLayout   Padding="15">
-            <CollectionView x:Name="collectionView" SelectionMode="Single"  SelectionChanged="collectionView_SelectionChanged" ItemsLayout="VerticalGrid,2" BackgroundColor="#E8F8F5"  >
+        <StackLayout   Spacing="10" Margin="30">
+            <Label   FontAttributes="Italic"  TextColor="white" Text="Lista de Mascotas"  FontSize="35" HorizontalTextAlignment="center"/>
+            <CollectionView x:Name="collectionView" SelectionMode="Single"  SelectionChanged="collectionView_SelectionChanged" ItemsLayout="VerticalGrid,2" Opacity="30"   >
                 <CollectionView.ItemTemplate  >
                     <DataTemplate  >
                         <Frame
-                        Padding="15"
-                        CornerRadius="5"
+                        Padding="10"
+                        Margin="5"
+                            BorderColor="Bisque"
+                            
+                        CornerRadius="10"
                         IsClippedToBounds="False">
                         <Grid RowSpacing="20" >  <!--Definición de grid-->
                             <Grid.RowDefinitions>
@@ -43,7 +47,8 @@
                             <Label Grid.Column="1" 
                                    Text="{Binding nombre}"
                                    FontAttributes="Bold"
-                                   LineBreakMode="TailTruncation" TextColor="Black"   FontSize="Medium" />
+                                   LineBreakMode="TailTruncation" TextColor="Black"   FontSize="Medium"
+                                   />
                             <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding precio}"
@@ -57,23 +62,23 @@
             </CollectionView >
             <!--Agregando Entry para poder actualizar elementos--> 
             <StackLayout x:Name ="mystack" IsVisible="false" >
-                <Entry x:Name="nombre" Placeholder="Nombre" PlaceholderColor="Black" TextColor="Black" Background="#D6DBDF" FontAttributes="Bold"  />
-                <Entry x:Name="peso" Placeholder="Peso"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
-                <Entry x:Name="habitat" Placeholder="Habitat "  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black" />
-                <Entry x:Name="precio" Placeholder="Precio"  FontAttributes="Bold " TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black" />
-                <Entry x:Name="sexo" Placeholder="Sexo"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black" />
+                <Entry x:Name="nombre" Placeholder="Nombre" PlaceholderColor="Black" TextColor="Black" Background="white" FontAttributes="Bold"  />
+                <Entry x:Name="peso" Placeholder="Peso"  FontAttributes="Bold"  TextColor="BLACK" Background="white" PlaceholderColor="Black"/>
+                <Entry x:Name="habitat" Placeholder="Habitat "  FontAttributes="Bold"  TextColor="BLACK" Background="white" PlaceholderColor="Black" />
+                <Entry x:Name="precio" Placeholder="Precio"  FontAttributes="Bold " TextColor="BLACK" Background="white" PlaceholderColor="Black" />
+                <Entry x:Name="sexo" Placeholder="Sexo"  FontAttributes="Bold"  TextColor="BLACK" Background="white"     PlaceholderColor="Black" />
 
-                <Entry x:Name="edad" Placeholder="Edad"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
-                <Entry x:Name="iva" Placeholder="Iva"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
-                <Entry x:Name="ruta" Placeholder="ruta"  FontAttributes="Bold"  TextColor="BLACK" Background="#D6DBDF" PlaceholderColor="Black"/>
+                <Entry x:Name="edad" Placeholder="Edad"  FontAttributes="Bold"  TextColor="BLACK" Background="white" PlaceholderColor="Black"/>
+                <Entry x:Name="iva" Placeholder="Iva"  FontAttributes="Bold"  TextColor="BLACK" Background="white" PlaceholderColor="Black"/>
+                <Entry x:Name="ruta" Placeholder="ruta"  FontAttributes="Bold"  TextColor="BLACK" Background="white"  PlaceholderColor="Black"/>
                 
-            </StackLayout>
+            </StackLayout >
            <!--declaración de botones-->
-            <Button x:Name="Eliminar" Text="Eliminar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"   ImageSource="eliminar.png"
+            <Button x:Name="Eliminar" Text="Eliminar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"   ImageSource="eliminar.png" FontSize="22" FontAttributes="Bold"
                         TextColor="White" BackgroundColor="#EA3838"/>
-            <Button x:Name="Actualizar" Text="Actualizar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="actualizar.png"
-                        TextColor="White" BackgroundColor="#389FEA"  />
-            <Button x:Name="botonregresar"  Clicked="regresar" FontSize="Medium" TextColor="White" BorderColor="Black"   ImageSource="regresar.png" CornerRadius="50" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"   />
+            <Button x:Name="Actualizar" Text="Actualizar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="actualizar.png" FontSize="22" FontAttributes="Bold"
+                        TextColor="White" BackgroundColor="#00AE0C"  />
+            <Button x:Name="botonregresar"  Clicked="regresar"  FontSize="22" FontAttributes="Bold"  BorderColor="Black"   ImageSource="regresar.png" CornerRadius="50" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"   />
 
             
 

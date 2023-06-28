@@ -23,6 +23,7 @@ namespace AppMascotas.Validations
         private void Unfocused(object sender, FocusEventArgs e)
         {
             Entry entry = (Entry)sender;
+
             entry.Text = entry.Text.Substring(0, MaxLength);
 
         }

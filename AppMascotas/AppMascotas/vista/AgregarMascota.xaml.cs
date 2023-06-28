@@ -48,9 +48,18 @@ namespace AppMascotas.vista
 
         {
             
-             //Comparación si los hay campos vacios
-            if (usuario.Text == "" & tamanio.Text == "" & peso.Text == "" & habitat.Text == "" & precio.Text == ""  & edad.Text == "" & iva.Text == "" & ruta.Text == "")
+            //Comparación si los hay campos vacios
+            if (string.IsNullOrWhiteSpace(this.usuario.Text) ||
+                string.IsNullOrWhiteSpace(this.tamanio.Text )||
+                string.IsNullOrWhiteSpace(this.peso.Text) ||
+                string.IsNullOrWhiteSpace(this.habitat.Text) ||
+                string.IsNullOrWhiteSpace(this.precio.Text) ||
+                string.IsNullOrWhiteSpace(this.sexo.Text) ||
+                string.IsNullOrWhiteSpace(this.edad.Text) ||
+                string.IsNullOrWhiteSpace(this.iva.Text) ||
+                string.IsNullOrWhiteSpace(this.ruta.Text))
             {
+              
                 await DisplayAlert("Aviso", "Existen campos sin rellenar", "Ok");
             }
             else
@@ -73,8 +82,10 @@ namespace AppMascotas.vista
 
                 }); ;
 
-                limpiar(); //limpiar los entrys
+              
+                limpiar(); //limpiar los entrys               
                 await Navigation.PushAsync(new ListarMascota());  //navegacion entre vistas
+                await DisplayAlert("Aviso", "Se ha guardado con éxito", "Ok");
 
             }
 

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppMascotas.vista.ListarUsuario">
+             x:Class="AppMascotas.vista.ListarUsuario"
+             BackgroundImageSource="/drawable/fondo3">
     <ContentPage.ToolbarItems>
         <ToolbarItem >
             <ToolbarItem.IconImageSource>
@@ -14,38 +15,71 @@
     <ContentPage.Content>
         <!--listar usuarios-->
         <StackLayout Spacing="10" Margin="30">
-            <Entry x:Name="nombre" Placeholder="Nombre" />
-            <Entry x:Name="contrasenia" Placeholder="Contrasenia" />
-            <Entry x:Name="correo" Placeholder="Correo" />
-            <Entry x:Name="ine" Placeholder="Ine" />
-            <Entry x:Name="numcuenta" Placeholder="numcuenta" />
-            <Entry x:Name="telefono" Placeholder="Telefono" />
-            <Entry x:Name="direccion" Placeholder="Direccion" />
-            <!--mostrar usuarios-->
-            <CollectionView x:Name="collectionView" SelectionMode="Single"  SelectionChanged="collectionView_SelectionChanged"  >
-                <CollectionView.ItemTemplate >
-                    <DataTemplate  >
-                        <StackLayout  BackgroundColor="#5BBBD9" Spacing="10"   >
 
-                            <Label Text="{Binding nombre}" TextColor="Black"   FontSize="Medium" />
-                            <Label Text="{Binding contrasenia}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding correo}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding ine}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding numcuenta}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding telefono}" TextColor="Black"  FontSize="Medium" />
-                            <Label Text="{Binding direccion}" TextColor="Black"  FontSize="Medium" />
-                        </StackLayout>
+            <Label   FontAttributes="Italic"  TextColor="White" Text="Lista de Usuarios"  FontSize="35" HorizontalTextAlignment="center"/>
+            <CollectionView x:Name="collectionView" SelectionMode="Single"  SelectionChanged="collectionView_SelectionChanged"  ItemsLayout="VerticalGrid,2" Opacity="30" >
+                <CollectionView.ItemTemplate  >
+                    <DataTemplate  >
+                        <Frame
+                        Padding="10"
+                        CornerRadius="10"
+                            Margin="10"
+                            BorderColor="Bisque"
+                        IsClippedToBounds="False">
+                            <Grid RowSpacing="20" >
+                                <!--Definición de grid-->
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="35"  />
+                                    <RowDefinition Height="35" />
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="70" />
+                                    <ColumnDefinition Width="140" />
+                                </Grid.ColumnDefinitions>
+                                <Image Grid.RowSpan="2"
+                                   Source="{Binding ruta}"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60"/>
+                                <Label Grid.Column="1" 
+                                   Text="{Binding nombre}"
+                                   FontAttributes="Bold"
+                                   LineBreakMode="TailTruncation" TextColor="Black"   FontSize="Medium"
+                                   />
+                                <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding correo}"
+                                   LineBreakMode="TailTruncation"
+                                   FontAttributes="Italic"
+                                   VerticalOptions="End"  TextColor="Black"   FontSize="Medium" />
+                            </Grid>
+                        </Frame>
                     </DataTemplate>
                 </CollectionView.ItemTemplate>
-            </CollectionView>
+            </CollectionView >
+            <StackLayout  x:Name ="mystack" IsVisible="false"  >
+                <Entry x:Name="nombre" Placeholder="Nombre" />
+                <Entry x:Name="contrasenia" Placeholder="Contrasenia" />
+                <Entry x:Name="correo" Placeholder="Correo" />
+                <Entry x:Name="ine" Placeholder="Ine" />
+                <Entry x:Name="numcuenta" Placeholder="numcuenta" />
+                <Entry x:Name="telefono" Placeholder="Telefono" />
+                <Entry x:Name="direccion" Placeholder="Direccion" />
+                <Entry x:Name="ruta" Placeholder="ruta"  FontAttributes="Bold"  TextColor="BLACK" Background="white"  PlaceholderColor="Black"/>
+            </StackLayout>       
+            
             
             <!--Declaración de botones-->
-            <Button x:Name="botonregresar" Text="Regresar" Clicked="regresar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#00AE0C"/>
-            <Button x:Name="Eliminar" Text="Eliminar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+
+
+            <Button x:Name="Eliminar" Text="Eliminar" Clicked="eliminar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"   ImageSource="eliminar.png" FontSize="22" FontAttributes="Bold"
                 TextColor="White" BackgroundColor="#DE5C20"/>
-            <Button x:Name="Actualizar" Text="Actualizar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
+            <Button x:Name="Actualizar" Text="Actualizar" Clicked="actualizar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"   ImageSource="actualizar.png" FontSize="22" FontAttributes="Bold"
                 TextColor="White" BackgroundColor="#5BBBD9"/>
+
+            <Button x:Name="botonregresar"  Clicked="regresar" FontSize="22" FontAttributes="Bold" TextColor="White" BorderColor="Black"   ImageSource="regresar.png" CornerRadius="50" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"   />
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

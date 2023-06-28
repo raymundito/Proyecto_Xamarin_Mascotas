@@ -3,9 +3,10 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMascotas.vista.AgregarMascota"
              xmlns:local="clr-namespace:AppMascotas.Validations"
-
              Title="Agregar Mascotas"
-              BackgroundColor="#273C56">
+              BackgroundColor="#273C56"
+             BackgroundImageSource="/drawable/fondo3"
+>
     
     <!--vista para agreagar mascotas-->
     <ContentPage.ToolbarItems>
@@ -20,7 +21,7 @@
     <ContentPage.Content>
         <ScrollView VerticalOptions="Center">
             <StackLayout>
-
+             
                 <StackLayout Margin="20">
                     <Grid> <!--definción de grid-->
                         <Grid.RowDefinitions>
@@ -32,19 +33,30 @@
                         </Grid.ColumnDefinitions>
                     </Grid>
                 </StackLayout>
+                <Label  FontAttributes="None"  TextColor="White" Text="Ingrese los datos que se le piden"  FontSize="23" HorizontalTextAlignment="center"/>
                 <StackLayout Spacing="10" Margin="30">
-                    <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"   Text="Gato" Placeholder="Nombre:" Keyboard="Text" />
+                    <Entry x:Name="usuario" Grid.Row="0" Grid.Column="0"    Placeholder="Nombre:" Keyboard="Text" />
+                    <Label FontAttributes="Bold"  TextColor="White" Text="Obligatorio*"  FontSize="15" HorizontalTextAlignment="End" IsVisible="false"/>
+                    
                     <Entry x:Name="tamanio"  Grid.Row="1" Grid.Column="0"  Text="23" Placeholder="Tamaño:" Keyboard="Text" >
+                    
                         <Entry.Behaviors> <!--validacion de campo tamanio-->
                             <local:MaxLengthValidatorBehavior  MaxLength="10"/>
                             <local:NumeroValidatorBehaviors/>
                         </Entry.Behaviors>
 
                     </Entry>
+                    <Label  FontAttributes="Bold"  TextColor="White" Text="Obligatorio*"  FontSize="15" HorizontalTextAlignment="End" />
                     <Entry x:Name="peso"  Grid.Row="1" Grid.Column="0"  Text="23" Placeholder="Peso:" Keyboard="Text"  />
+                    <Label  FontAttributes="Bold"  TextColor="White" Text="Obligatorio*"  FontSize="15" HorizontalTextAlignment="End" />
+
                     <Entry x:Name="habitat"  Grid.Row="1" Grid.Column="0" Text="selva"  Placeholder="Habitat:" Keyboard="Text" />
+                    <Label  FontAttributes="Bold"  TextColor="White" Text="Obligatorio*"  FontSize="15" HorizontalTextAlignment="end" />
+
                     <Entry x:Name="precio"  Grid.Row="1" Grid.Column="0"  Text="5" Placeholder="Precio:" Keyboard="Text" />
-                   <!-- <Entry x:Name="sexo"  Grid.Row="1" Grid.Column="0"  Text="m" Placeholder="Sexo:" Keyboard="Text"  /> -->
+                    <Label  FontAttributes="Bold"  TextColor="White" Text="Obligatorio*"  FontSize="15" HorizontalTextAlignment="end" />
+
+                    <!-- <Entry x:Name="sexo"  Grid.Row="1" Grid.Column="0"  Text="m" Placeholder="Sexo:" Keyboard="Text"  /> -->
                     <!--Declaracion de picker-->
                     <Picker x:Name="picker"
                             Title="Selecciona el sexo"
@@ -58,6 +70,7 @@
                         </Picker.ItemsSource>
                     </Picker>
                     <Label x:Name="sexo" Text="{Binding Source={x:Reference picker}, Path=SelectedItem}" IsVisible="false"/>
+                    <Label  FontAttributes="Bold"  TextColor="White" Text="Seleccione un registro*"  FontSize="15" HorizontalTextAlignment="End" />
 
                     <Entry x:Name="edad"  Grid.Row="1" Grid.Column="0"  Text="2" Placeholder="Edad:" Keyboard="Text"  />
                     <Entry x:Name="iva"  Grid.Row="1" Grid.Column="0"  Text="16" Placeholder="IVA:" Keyboard="Text" />
@@ -66,11 +79,12 @@
                 <StackLayout Spacing="10" Margin="30" >
                     <!--declaración de botones-->
                     <Button x:Name="AgregarMguardar" Text="Guardar" Clicked="Guardar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25" 
-                TextColor="White" BackgroundColor="#00AE0C"/>
+                TextColor="White" BackgroundColor="#00AE0C" FontSize="22" FontAttributes="Bold"/>
                     <Button x:Name="listarMascota"  Text="Listar"  Clicked="ListarMascota" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
-                       TextColor="White" BackgroundColor="#A7351C" />
-                    <Button x:Name="regresarmenu"  Text="Regresar"  Clicked="Regresarmenu" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"
-                       TextColor="White" BackgroundColor="#5BBBD9" />
+                       TextColor="White" BackgroundColor="#A7351C" FontSize="22" FontAttributes="Bold"/>
+                   
+                    <Button x:Name="regresarmenu"  Clicked="Regresarmenu"  FontSize="22" FontAttributes="Bold"  BorderColor="Black"   ImageSource="regresar.png" CornerRadius="50" FlexLayout.AlignSelf="Stretch"  HorizontalOptions="CenterAndExpand"   />
+
                 </StackLayout>
 
             </StackLayout>

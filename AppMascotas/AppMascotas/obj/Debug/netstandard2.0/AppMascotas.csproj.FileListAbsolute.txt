@@ -34,3 +34,4 @@ C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\App
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.dll
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\refint\AppMascotas.dll
 C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\AppMascotas.pdb
+C:\Users\so17\source\repos\AppMascotas\Proyecto_Xamarin_Mascotas\AppMascotas\AppMascotas\obj\Debug\netstandard2.0\vista\menuUser.xaml.g.cs

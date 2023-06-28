@@ -113,7 +113,6 @@ namespace AppMascotas.vista
         }
         //Eliminar mascotas
         private async void eliminar(object sender, EventArgs e)
-
         {
             if (this.mystack.IsVisible)
             {
@@ -134,6 +133,7 @@ namespace AppMascotas.vista
                         sexo.Text = "";
                         edad.Text = "";
                         iva.Text = "";
+                        ruta.Text = "";
                         this.mystack.IsVisible = false;
 
                     }

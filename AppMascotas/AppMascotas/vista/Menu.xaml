@@ -3,38 +3,46 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppMascotas.View.Menu"
              Title="Menú"
-              BackgroundColor="#BFC9CA">
+              BackgroundColor="#BFC9CA"
+             BackgroundImageSource="/drawable/fondo2">
+
+  
     <ContentPage.ToolbarItems>
         <ToolbarItem >
             <ToolbarItem.IconImageSource>
-                <OnPlatform x:TypeArguments="ImageSource" >
+                <OnPlatform x:TypeArguments="ImageSource"    >
                     <On Platform="Android" Value="Menu" />
                 </OnPlatform>
             </ToolbarItem.IconImageSource>
         </ToolbarItem>
     </ContentPage.ToolbarItems>
-  
 
+    <ScrollView>
         <StackLayout Margin="30" Spacing="70">
+          
         <Frame BackgroundColor="#3B3B3">
-            <Label Text="App Mascotas" TextColor="White" FontSize="Title" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" />
+
+
+                <Label  TextColor="black"  FontSize="50"  VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  FontAttributes = "Bold"  Text="Pets Store" FontFamily="nunito" />
+                
         </Frame>
-        <Image  HeightRequest="100" Source="/drawable/dogs.png" />
+        <Image  HeightRequest="200" Source="/drawable/dogs.png" />
 
         <StackLayout  Spacing="20">
-            <Button x:Name="botoncrear"  Text="Agregar Mascotas" Clicked="agregar" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"  ImageSource="agregarmas.png"
+                <Button x:Name="botoncrear"  Text="Agregar Mascotas" Clicked="agregar" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2"  ImageSource="agregarmas.png" FontSize="22" FontAttributes="Bold"
                        TextColor="White" BackgroundColor="#A7351C" />
-            <Button x:Name="botonlistar" Text="Listar Macotas" Clicked="listar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="listarmas.png"
+                <Button x:Name="botonlistar" Text="Listar Mascotas" Clicked="listar" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="listarmas.png" FontSize="22" FontAttributes="Bold"
                 TextColor="White" BackgroundColor="#00AE0C" />
-            <Button x:Name="botoncrearusuario"  Text="Agregar Usuario" Clicked="agregarUsuario" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2" ImageSource="agregarusr.png"
+            <!--<Button x:Name="botoncrearusuario"  Text="Agregar Usuario" Clicked="agregarUsuario" Grid.Row="3" Grid.ColumnSpan="3" CornerRadius="20"   BorderWidth="2" ImageSource="agregarusr.png"
                        TextColor="White" BackgroundColor="#DD31DA" />
             <Button x:Name="botonusuario" Text="Listar Usuario" Clicked="listarUsuario" Grid.Row="5" Grid.ColumnSpan="3" CornerRadius="25"  ImageSource="lista.png"
-                TextColor="White" BackgroundColor="#D35400"/>          
+                TextColor="White" BackgroundColor="#D35400"/>-->          
         </StackLayout>
 
 
       
     </StackLayout>
+    </ScrollView>
 </ContentPage>
 
 

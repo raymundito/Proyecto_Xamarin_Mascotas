@@ -8,7 +8,7 @@ namespace AppMascotas.Data
     public class Database
     {
         //crea el crud
-        private readonly SQLiteAsyncConnection _database;
+        public readonly SQLiteAsyncConnection _database;
 
         public Database(string dbPath)
         {
@@ -54,8 +54,8 @@ namespace AppMascotas.Data
 
 
 
-        //Métodos para crear el crud USUARIO
-        //Método para obtener Usuario
+        //    //Métodos para crear el crud USUARIO
+        //    //Método para obtener Usuario
 
         public Task<List<Usuario>> GetUsuarioAsync()
         {
@@ -84,10 +84,15 @@ namespace AppMascotas.Data
         }
 
         //Método para obtener  para validar contasenia y usuario
-        public Task validarUsuario(string nombre, string contrasenia)
-        {
-            return _database.QueryAsync<Usuario>("Select * from Usuario where nombre=? and contrasenia=?", nombre, contrasenia);
-        }
+         public IEnumerable<Usuario> validarUsuario(string nombre, string contrasenia)
+          {
+              var result= _database.QueryAsync<Usuario>("Select * from Usuario Where nombre=? and contrasenia=?", nombre, contrasenia);
+              return result.Result;
+          }
+
+       
+
+
     }
 
 }

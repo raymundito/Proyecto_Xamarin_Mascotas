@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppMascotas.vista.menuUser"
+             BackgroundImageSource="/drawable/fondo2"
+             >
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem >
+            <ToolbarItem.IconImageSource>
+                <OnPlatform x:TypeArguments="ImageSource" >
+                    <On Platform="Android" Value="Menu" />
+                </OnPlatform>
+            </ToolbarItem.IconImageSource>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <ScrollView>
+            <StackLayout Margin="30" Spacing="70">
+
+                <Frame BackgroundColor="#3B3B3">
+                <Label Text="Pets Store" TextColor="Black" FontSize="50" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand"  FontAttributes = "Bold" />
+                </Frame>
+                <Image  HeightRequest="200" Source="/drawable/userf" />
+
+                <StackLayout  Spacing="20">
+
+                <Button x:Name="botoncrearusuario"  Text="Agregar Usuario" Clicked="agregarUsuario" Grid.Row="3" FontSize="22" FontAttributes="Bold" Grid.ColumnSpan="3" CornerRadius="20"  BorderWidth="2" ImageSource="agregarusr.png"
+                       TextColor="White" BackgroundColor="#2471A3" />
+                <Button x:Name="botonusuario" Text="Listar Usuario" Clicked="listarUsuario" Grid.Row="5" Grid.ColumnSpan="3" FontSize="22" FontAttributes="Bold" CornerRadius="25" ImageSource="lista.png"
+                TextColor="White" BackgroundColor="#D35400"/>
+                </StackLayout>
+
+
+
+            </StackLayout>
+        </ScrollView>
+
+  
+</ContentPage>
